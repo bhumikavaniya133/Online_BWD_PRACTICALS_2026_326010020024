@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 19 - Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf2f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 30px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #154360;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #2874a6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Student Registration</h1>
+
+        <form id="registrationForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email Address:</
