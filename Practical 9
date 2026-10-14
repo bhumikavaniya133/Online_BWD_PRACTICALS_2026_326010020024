@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical 9 - Canvas Drawing</title>
+</head>
+<body>
+
+    <h1>HTML5 Canvas Drawing</h1>
+    <p>Drawing different shapes using the HTML5 Canvas element.</p>
+
+    <canvas id="myCanvas" width="500" height="300"
+            style="border:2px solid black;">
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Draw a rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(30, 30, 120, 80);
+
+        // Draw a circle
+        ctx.beginPath();
+        ctx.arc(230, 70, 40, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        // Draw a line
+        ctx.beginPath();
+        ctx.moveTo(320, 30);
+        ctx.lineTo(450, 100);
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 4;
+        ctx.stroke();
+
+        // Draw a triangle
+        ctx.beginPath();
+        ctx.moveTo(100, 180);
+        ctx.lineTo(50, 260);
+        ctx.lineTo(150, 260);
+        ctx.closePath();
+        ctx.fillStyle = "orange";
+        ctx.fill();
+    </script>
+
+</body>
+</html>
