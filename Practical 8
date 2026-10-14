@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            margin: 0;
+        }
+        header {
+            background: #173b70;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Annual College Fest 2026</h1>
+        <p>Celebrate Creativity and Technology</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>About the Event</h2>
+            <p>Join us for a day of learning, fun, music, and student activities.</p>
+        </section>
+
+        <section>
+            <h2>Event Audio</h2>
+            <audio controls>
+                <source src="event-audio.mp3" type="audio/mpeg">
+                Your browser does not support audio.
+            </audio>
+            <p>Upload an audio file named <b>event-audio.mp3</b> to make this player work.</p>
+        </section>
+
+        <section>
+            <h2>Event Video</h2>
+            <video controls width="100%">
+                <source src="event-video.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+            <p>Upload a video file named <b>event-video.mp4</b> to make this player work.</p>
+        </section>
+    </main>
+</body>
+</html>
