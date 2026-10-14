@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practical 18 - Subject Information</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf2f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #cccccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #154360;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+        }
+
+        button {
+            background-color: #2874a6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #info {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #eafaf1;
+            border-radius: 5px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Subject Information</h1>
+
+        <p>Select a subject to view its information:</p>
+
+        <select id="subject">
+            <option value="">-- Select Subject --</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Bootstrap">Bootstrap</option>
+        </select>
+
+        <button onclick="showInfo()">Show Information</button>
+
+        <div id="info">Subject details will appear here.</div>
+    </div>
+
+    <script>
+        function showInfo() {
+            let subject = document.getElementById("subject").value;
+            let info = document.getElementById("info");
+
+            let details = {
+                HTML: "HTML stands for HyperText Markup Language. It structures webpages.",
+                CSS: "CSS stands for Cascading Style Sheets. It styles webpages.",
+                JavaScript: "JavaScript adds interactivity and dynamic behavior to webpages.",
+                Bootstrap: "Bootstrap is a framework used to create responsive webpages."
+            };
+
+            if (subject === "") {
+                info.innerHTML = "Please select a subject.";
+            } else {
+                info.innerHTML = "<strong>" + subject +
+                    "</strong><br>" + details[subject];
+            }
+        }
+    </script>
+
+</body>
+</html>
