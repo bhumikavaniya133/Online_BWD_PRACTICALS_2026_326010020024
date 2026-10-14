@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practical 17 - Student Eligibility Checker</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf2f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #cccccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #154360;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #2874a6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Student Eligibility Checker</h1>
+
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <label for="marks">Percentage (%):</label>
+        <input type="number" id="marks" min="0" max="100"
+               placeholder="Enter percentage">
+
+        <button onclick="checkEligibility()">Check Eligibility</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function checkEligibility() {
+            let name = document.getElementById("name").value.trim();
+            let marks = document.getElementById("marks").value;
+            let result = document.getElementById("result");
+
+            if (name === "" || marks === "" ||
+                Number(marks) < 0 || Number(marks) > 100) {
+                result.innerHTML =
+                    "Please
