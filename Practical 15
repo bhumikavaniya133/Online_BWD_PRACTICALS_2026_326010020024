@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 15 - CSS Effects</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f0ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .card {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #cccccc;
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 12px 25px #aaaaaa;
+        }
+
+        .button {
+            background: #6c3fc5;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background: #452080;
+            transform: scale(1.1);
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            margin: 20px auto;
+            background: #ff9800;
+            border-radius: 50%;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Interactive Webpage</h1>
+    <p>Explore hover effects, transitions, and animations.</p>
+
+    <div class="card">
+        <div class="circle"></div>
+
+        <h2>CSS Effects</h2>
+        <p>Move your pointer over the card and button to see the effects.</p>
+
+        <button class="button"
+                onclick="alert('You clicked the button!')">
+            Click Me
+        </button>
+    </div>
+
+</body>
+</html>
